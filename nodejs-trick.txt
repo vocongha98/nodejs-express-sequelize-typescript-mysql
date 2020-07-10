@@ -15,3 +15,13 @@ res.header("Access-Control-Allow-Origin", "*");
 res.header("Access-Control-Expose-Headers", "x-total-count");
 res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH");
 res.header("Access-Control-Allow-Headers", "Content-Type,authorization");
+
+##api-gateway
+npm install --save cors helmet dotenv fast-gateway
+npm install --save-dev nodemon @types/cors @types/helmet @babel/core @babel/node
+
+"scripts": {
+    "start": "babel-node dist/server.js",
+    "dev": "nodemon --exec babel-node src/server.js",
+    "build": "babel src -d dist"
+},
